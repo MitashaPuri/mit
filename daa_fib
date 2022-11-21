@@ -1,0 +1,25 @@
+#non_recursive
+a=int(input("Enter the terms"))
+f=0
+s=1
+if a<=0:
+print("series are", f)
+else:
+print(f,s,end=" ")
+for x in range(2,a):
+next=f+s
+print(next,end=" ")
+f=s
+s=next
+
+
+#Recursive
+def fib(n):
+if n<=1:
+return n
+else:
+return fib(n-1)+fib(n-2)
+nterms=int(input("Enter the terms"))
+print("fibo_series")
+for i in range(nterms):
+print(fib(i))
